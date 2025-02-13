@@ -1,0 +1,66 @@
+body {
+    font-family: 'Moumentum';
+    background-color: #f0f4f8;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+}
+
+h1 {
+    font-family: 'Moumentum';
+    font-size: 2.5rem;
+    text-align: center;
+    color: #2c3e50;
+}
+
+#periodic-table {
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    grid-template-rows: repeat(9, 50px);
+    gap: 6px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.element {
+    border: 1px solid rgba(0,0,0,0.2);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.element:hover {
+    transform: scale(1.2);
+    z-index: 10;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+#element-popup {
+    position: fixed;
+    background: rgb(244, 219, 219);
+    border: 2px solid #2980b9;
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    z-index: 1000;
+    max-width: 300px;
+    transition: all 0.4s ease;
+}
+
+.hidden {
+    display: none;
+}
